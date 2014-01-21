@@ -6,6 +6,7 @@ class TopReferrersController < ApplicationController
     urls = Hash.new
     referrers = Array.new
 
+    # I really don't like this much logic on the controller... :\
     (0..days).each do |day|
       top_urls = WebStats.top_urls(days, urls_top)
       top_urls.each do |top_url|

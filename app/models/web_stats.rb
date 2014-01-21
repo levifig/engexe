@@ -1,5 +1,8 @@
 class WebStats < Sequel::Model
 
+  # I already want to refactor this to avoid so many SQL calls (slooooow)
+
+
   def self.top_urls(days, *qty) # quantity is optional
     return false unless (days >=  0)
     results = WebStats.
@@ -11,7 +14,7 @@ class WebStats < Sequel::Model
       order_by(Sequel.desc(:visits))
 
     # Quantity is optional but SQL doesn't like NULL values on LIMIT
-    results.limit(qty) unless qty.nil? 
+    results.limit(qty) unless !qty 
     return results
   end
 
@@ -24,7 +27,8 @@ class WebStats < Sequel::Model
       order_by(Sequel.desc(:visits))
 
     # Quantity is optional but SQL doesn't like NULL values on LIMIT
-    results.limit(qty) unless qty.nil? 
+    results.limit(qty) unless !qty 
+
     return results
   end
 end

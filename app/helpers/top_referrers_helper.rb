@@ -1,0 +1,2 @@
+module TopReferrersHelper
+end

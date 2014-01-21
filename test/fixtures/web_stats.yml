@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  url: 
+  referrer: 
+  created_at: 2014-01-19 23:26:13
+  hash: 
+
+two:
+  url: 
+  referrer: 
+  created_at: 2014-01-19 23:26:13
+  hash: 

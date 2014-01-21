@@ -5,7 +5,11 @@ require 'digest/md5'
 require 'ruby-progressbar'
 
 # Number of rows to generate
-rows = 1000
+rows = 1000000 # ONEEMILLLIIOOONNNNN
+# I see you're going for the big million, aye? You might wanna go
+# grab a cup of coffee or read a book... or an entire series.
+
+
 
 # I imagine additional URLs could've been added for "realism"
 # but that felt a bit out of the scope of this specific exercise
